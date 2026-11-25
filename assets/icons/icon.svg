@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" width="128" height="128">
+  <defs>
+    <linearGradient id="ozonGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#005BFF"/>
+      <stop offset="100%" stop-color="#003EB3"/>
+    </linearGradient>
+  </defs>
+  <rect x="8" y="8" width="112" height="112" rx="26" fill="url(#ozonGrad)"/>
+  <rect x="34" y="34" width="60" height="60" rx="10" fill="none" stroke="#FFFFFF" stroke-width="6"/>
+  <rect x="48" y="48" width="32" height="32" rx="4" fill="#00D2FF"/>
+  <path d="M46 20v14M64 20v14M82 20v14M46 94v14M64 94v14M82 94v14M20 46h14M20 64h14M20 82h14M94 46h14M94 64h14M94 82h14" stroke="#FFFFFF" stroke-width="6" stroke-linecap="round"/>
+</svg>

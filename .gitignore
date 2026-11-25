@@ -1,0 +1,18 @@
+# Сборки и артефакты расширений
+*.zip
+*.xpi
+*.crx
+*.pem
+web-ext-artifacts/
+dist/
+build/
+
+# Зависимости и логи
+node_modules/
+npm-debug.log*
+
+# Системные файлы и IDE
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/

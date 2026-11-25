@@ -1,0 +1,44 @@
+{
+  "manifest_version": 3,
+  "name": "Ozon PC Configurator",
+  "version": "1.0.0",
+  "description": "Полноэкранный конфигуратор сборки ПК из комплектующих на Ozon с проверкой совместимости и подсчётом цены.",
+  "icons": {
+    "48": "assets/icons/icon.svg",
+    "96": "assets/icons/icon.svg",
+    "128": "assets/icons/icon.svg"
+  },
+  "action": {
+    "default_title": "Открыть Ozon PC Configurator",
+    "default_icon": {
+      "48": "assets/icons/icon.svg"
+    }
+  },
+  "background": {
+    "scripts": ["src/background/service-worker.js"],
+    "service_worker": "src/background/service-worker.js",
+    "type": "module"
+  },
+  "permissions": [
+    "storage",
+    "tabs",
+    "activeTab",
+    "scripting"
+  ],
+  "host_permissions": [
+    "*://*.ozon.ru/*"
+  ],
+  "content_scripts": [
+    {
+      "matches": ["*://www.ozon.ru/product/*", "*://ozon.ru/product/*"],
+      "js": ["src/content/product-injector.js"],
+      "run_at": "document_idle"
+    }
+  ],
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "ozon-pc-configurator@builder.local",
+      "strict_min_version": "115.0"
+    }
+  }
+}
